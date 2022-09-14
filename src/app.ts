@@ -19,7 +19,7 @@ app.get('/', (_: Request, res: Response) => {
   res.status(200).json({
     status: true,
     message: 'Api de la pagina de anime Anime Fenix hecho en Typescript',
-    repository: 'https://github.com/MarioSC21/API-Scraper-AnimeFenix',
+    repository: 'https://github.com/MarioSC21/AnimeFenix-Api-Scraping',
     endPoints: {
       latest: '/home',
       watch: '/ver/:id',
