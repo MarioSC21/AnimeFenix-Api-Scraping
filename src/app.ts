@@ -25,7 +25,7 @@ app.get('/', (_: Request, res: Response) => {
       watch: '/ver/:id',
       info: '/info/:id',
       download: '/download/:id',
-      search: '/search/:id'
+      search: '/search?q=name'
     },
     endPointsPost: {
       info: 'colocar el nombre de usuario y password de la pagina de animefenix si desea descargar con su usuario',
