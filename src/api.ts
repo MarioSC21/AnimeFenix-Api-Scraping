@@ -1,14 +1,18 @@
 import parse from 'node-html-parser'
 import axios from 'axios'
+import config from './config'
 import { API_RUTAS, Iparse } from './types'
 import HttpProxyAgent from 'http-proxy-agent/dist/agent'
 import HttpsProxyAgent from 'https-proxy-agent/dist/agent'
 
 const URL_ANIME: string = 'https://www.animefenix.tv'
-const proxy = 'http://b2ab7b5867028db2d36064fcf9e23a7296966d91:antibot=true@proxy.zenrows.com:8001'
+
+// ? pagina para usar los proxys zenrows
+const proxy = config.proxy
 const httpAgent = new HttpProxyAgent(proxy)
 const httpsAgent = new HttpsProxyAgent(proxy)
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
+
 // Buscar proxys anti bot o biblioteca para evitar el bloqueo de la pagina
 // const urlAntiBot = 'https://api.zenrows.com/v1/?apikey=b2ab7b5867028db2d36064fcf9e23a7296966d91&url=https%3A%2F%2Fwww.animefenix.tv%2F&antibot=true'
 // const headers = {
